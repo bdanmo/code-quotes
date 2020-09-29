@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.container
+    h1= title
+    p.intro Welcome to #{title}! 😉
+
+    ul.quote-list
+      each quote in quotes
+        li.quote-item
+          a(href=`/quotes/${quote.id}`)
+            p.quote "#{quote.quote}"
+            p.source &mdash; #{quote.source}
+
